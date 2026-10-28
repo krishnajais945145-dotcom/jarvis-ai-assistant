@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/jarvis_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvAppTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="J.A.R.V.I.S."
+                android:textColor="@color/jarvis_cyan"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Companion Node • Realme 10 Pro"
+                android:textColor="@color/jarvis_text_secondary"
+                android:textSize="13sp"
+                android:letterSpacing="0.05" />
+        </LinearLayout>
+
+        <!-- Status Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/jarvis_card_bg"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/jarvis_card_border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="CONNECTION STATUS"
+                        android:textColor="@color/jarvis_text_muted"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1" />
+
+                    <!-- Status Indicator Pill -->
+                    <TextView
+                        android:id="@+id/tvStatusBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DISCONNECTED"
+                        android:textColor="@color/jarvis_red"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:background="#20EF4444" />
+                </LinearLayout>
+
+                <!-- Server Info Details -->
+                <TextView
+                    android:id="@+id/tvStatusDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enter laptop IP and pairing PIN below to connect."
+                    android:textColor="@color/jarvis_text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Pairing Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/jarvis_card_bg"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/jarvis_card_border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WI-FI PAIRING CONFIGURATION"
+                    android:textColor="@color/jarvis_text_muted"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Laptop IP Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Laptop Wi-Fi IP Address"
+                    android:textColorHint="@color/jarvis_text_muted"
+                    app:boxStrokeColor="@color/jarvis_cyan"
+                    app:hintTextColor="@color/jarvis_cyan"
+                    android:layout_marginBottom="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etHostIp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="192.168.137.183"
+                        android:hint="e.g. 192.168.137.183"
+                        android:inputType="textUri"
+                        android:textColor="@color/jarvis_text_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Port & PIN Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Port"
+                        android:textColorHint="@color/jarvis_text_muted"
+                        app:boxStrokeColor="@color/jarvis_cyan"
+                        app:hintTextColor="@color/jarvis_cyan"
+                        android:layout_marginEnd="6dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPort"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="8765"
+                            android:inputType="number"
+                            android:textColor="@color/jarvis_text_primary" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="6-Digit PIN"
+                        android:textColorHint="@color/jarvis_text_muted"
+                        app:boxStrokeColor="@color/jarvis_cyan"
+                        app:hintTextColor="@color/jarvis_cyan"
+                        android:layout_marginStart="6dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="742918"
+                            android:inputType="numberPassword"
+                            android:textColor="@color/jarvis_text_primary" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Connect / Disconnect Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnConnect"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="@string/connect"
+                    android:textColor="@color/jarvis_bg"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    app:cornerRadius="10dp"
+                    app:backgroundTint="@color/jarvis_cyan" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Permissions Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/jarvis_card_bg"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/jarvis_card_border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ANDROID PERMISSIONS"
+                    android:textColor="@color/jarvis_text_muted"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Contacts Perm Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Read Contacts Access"
+                        android:textColor="@color/jarvis_text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvPermContacts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Denied"
+                        android:textColor="@color/jarvis_red"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Phone Call Perm Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Direct Phone Call Access"
+                        android:textColor="@color/jarvis_text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvPermCalls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Denied"
+                        android:textColor="@color/jarvis_red"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Request Permissions Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPermissions"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="@string/grant_permissions"
+                    android:textColor="@color/jarvis_cyan"
+                    android:textStyle="bold"
+                    app:strokeColor="@color/jarvis_cyan"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="10dp"
+                    app:backgroundTint="@android:color/transparent" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Live Activity Log Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/jarvis_card_bg"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/jarvis_card_border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LIVE CONSOLE &amp; ACTIVITY LOG"
+                    android:textColor="@color/jarvis_text_muted"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvActivityLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:fontFamily="monospace"
+                    android:text="JARVIS Companion initialized.\nReady to connect.\n"
+                    android:textColor="@color/jarvis_cyan"
+                    android:textSize="11sp"
+                    android:scrollbars="vertical"
+                    android:background="#0A0F1D"
+                    android:padding="10dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

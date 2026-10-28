@@ -1,0 +1,11 @@
+<resources>
+    <style name="Theme.JarvisCompanion" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/jarvis_cyan</item>
+        <item name="colorPrimaryVariant">@color/jarvis_cyan_dark</item>
+        <item name="colorOnPrimary">@color/jarvis_bg</item>
+        <item name="colorSecondary">@color/jarvis_green</item>
+        <item name="android:statusBarColor">@color/jarvis_bg</item>
+        <item name="android:navigationBarColor">@color/jarvis_bg</item>
+        <item name="android:windowBackground">@color/jarvis_bg</item>
+    </style>
+</resources>

@@ -1,0 +1,17 @@
+.env
+__pycache__/
+*.pyc
+dist/
+build/
+*.spec
+.jarvis_cache/
+user_settings.json
+*.mp3
+*.wav
+*.db
+*.sqlite
+*.sqlite3
+*.jks
+*.keystore
+*.lnk
+

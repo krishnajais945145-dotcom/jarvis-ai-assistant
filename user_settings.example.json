@@ -1,0 +1,21 @@
+{
+    "wake_word": "hey jarvis",
+    "wake_word_sensitivity": 0.65,
+    "wake_word_engine": "keyword",
+    "voice_engine": "edge-tts",
+    "voice_female_en": "en-IN-NeerjaNeural",
+    "voice_female_hi": "hi-IN-SwaraNeural",
+    "voice_rate": "+0%",
+    "voice_volume": "+0%",
+    "language_mode": "Auto-Detect (Match User Language)",
+    "preferred_llm": "gemini",
+    "personality_tone": "witty_sarcastic",
+    "approved_workspace": "",
+    "notes_dir": "",
+    "memory_db_path": "",
+    "prefix_saved_answer": false,
+    "start_on_boot": false,
+    "system_tray_minimize": true,
+    "mic_index": null,
+    "gemini_key": ""
+}

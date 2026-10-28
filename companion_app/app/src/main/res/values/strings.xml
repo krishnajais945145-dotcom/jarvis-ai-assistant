@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">JARVIS Companion</string>
+    <string name="status_disconnected">DISCONNECTED</string>
+    <string name="status_connecting">CONNECTING...</string>
+    <string name="status_connected">ONLINE &amp; PAIRED</string>
+    <string name="connect">CONNECT TO JARVIS</string>
+    <string name="disconnect">DISCONNECT</string>
+    <string name="grant_permissions">GRANT PERMISSIONS</string>
+    <string name="permissions_granted">ALL PERMISSIONS GRANTED</string>
+    <string name="calling_prompt">Calling %1$s (%2$s)...</string>
+</resources>
